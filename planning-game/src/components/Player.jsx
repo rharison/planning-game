@@ -1,9 +1,9 @@
 import React from 'react'
 import './Player.css'
 
-function Player({ name }) {
+function Player({ name, isPlayed }) {
   return (
-    <div className='player'>
+    <div className='cardPlayer'>
       <h1>{name}</h1>
     </div>
   )
