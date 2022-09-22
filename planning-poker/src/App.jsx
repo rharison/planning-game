@@ -1,10 +1,22 @@
 import './App.css'
+import Table from './components/Table'
 
 function App() {
 
+  const players = [
+    {name: 'Rharison'},
+    {name: 'Thander'},
+    // {nome: 'Marcelo'},
+    // {nome: 'Luiz Alexandre'},
+    // {nome: 'Wanderson'},
+    // {nome: 'Rayslla'},
+    // {nome: 'Marco'},
+    // {nome: 'Matheus'},
+  ]
+
   return (
-    <div className="App">
-      <h1>Poker</h1>
+    <div className='app'>
+      <Table players={players}/>
     </div>
   )
 }
