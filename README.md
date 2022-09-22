@@ -1,1 +1,1 @@
-# planning-poker
+# planning-game
