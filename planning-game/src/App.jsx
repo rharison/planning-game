@@ -13,6 +13,11 @@ function App() {
       </div>
       <div className='contaier-players'>
         <Player name={"rharison"}/>
+        <Player name={"thander"}/>
+        <Player name={"jamel"}/>
+        <Player name={"rharison"}/>
+        <Player name={"thander"}/>
+        <Player name={"jamel"}/>
       </div>
     </div>
   )

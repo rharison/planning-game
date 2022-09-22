@@ -36,5 +36,9 @@ body {
   height: 100%;
   padding: 1.2rem;
   box-sizing: border-box;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-basis: content;
+  justify-content: center;
 }
 

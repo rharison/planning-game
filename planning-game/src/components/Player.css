@@ -1,6 +1,45 @@
-.cardPlayer {
+.card-player {
   width: 220px;
   height: 200px;
-  border: 1px solid black;
+  border: 1px solid #00000038;
   border-radius: 1rem;
+  position: relative;
+}
+
+.container-status {
+  width: 22px;
+  height: 22px;
+  right: -10px;
+  top: -10px;
+  position: absolute;
+}
+
+.container-status.played{
+  width: 35px;
+  height: 35px;
+  right: -15px;
+  top: -13px;
+}
+
+.container-name-player {
+  background-color: #0000000a;
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+.container-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 50px);
+  font-size: 7rem;
+  color: #0000001c;
+}
+
+.container-value.played {
+  color: black;
 }
