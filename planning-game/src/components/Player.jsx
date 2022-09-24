@@ -4,8 +4,9 @@ import waitingAnimation from '../../public/assets/animations/waiting.json'
 import playedAnimation from '../../public/assets/animations/played.json'
 import './Player.css'
 
-function Player({ name, isPlayed = true }) {
-  const [isPlayedState, setIsPlayedState] = React.useState(isPlayed)
+function Player({ name, gameId }) {
+  const [isPlayedState, setIsPlayedState] = React.useState(false)
+  const [isShowValue, setIsShowValue] = React.useState(false)
   const [valuePlayed, setValuePlayed] = React.useState(10)
   return (
     <div className='card-player'>
@@ -16,7 +17,7 @@ function Player({ name, isPlayed = true }) {
         {name.toUpperCase()}
       </div>
       <div className={'container-value' + (isPlayedState ? ' played' : '')}>
-        {isPlayedState ? valuePlayed : '?'}
+        {(isPlayedState && isShowValue) ? valuePlayed : '?'}
       </div>
     </div>
   )

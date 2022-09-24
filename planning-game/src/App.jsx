@@ -1,8 +1,20 @@
+import {
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
 import './App.css'
-import Player from './components/Player'
+import Game from "./partials/game/Game";
+import CreateRoom from "./partials/createRoom/CreateRoom";
+import EnterGame from "./partials/enterGame/EnterGame";
 import { GiGamepadCross } from 'react-icons/gi';
 
-function App() {
+const PrivateRoute = ({ children, redirectTo }) => {
+  const user = localStorage.getItem('user');
+  return user ? children : <Navigate to={ redirectTo }/>;
+}
+
+export default function App() {
   return (
     <div className='app'>
       <div className='top-bar'>
@@ -11,16 +23,18 @@ function App() {
           <h2>Planningame</h2>
         </div>
       </div>
-      <div className='contaier-players'>
-        <Player name={"rharison"}/>
-        <Player name={"thander"}/>
-        <Player name={"jamel"}/>
-        <Player name={"rharison"}/>
-        <Player name={"thander"}/>
-        <Player name={"jamel"}/>
-      </div>
+      <Routes>
+        <Route path="/createroom" element={ <CreateRoom/> } />
+        <Route path="/entergame" element={ <EnterGame/> } />
+        <Route
+          path="/game"
+          element={
+            <PrivateRoute redirectTo="/entergame">
+              <Game/>
+            </PrivateRoute>
+          }
+        />
+      </Routes>
     </div>
-  )
+  );
 }
-
-export default App
