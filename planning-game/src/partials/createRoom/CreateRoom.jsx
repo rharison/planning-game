@@ -4,7 +4,7 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { Modal, Button, Text, Input } from "@nextui-org/react";
+import { Modal, Button, Text, Input,Container } from "@nextui-org/react";
 
 function CreateRoom() {
   const [visibleModal, setVisibleModal] = React.useState(false);
@@ -70,7 +70,9 @@ function CreateRoom() {
           <Button>Create</Button>
         </Modal.Body>
       </Modal>
-      <FormControl fullWidth>
+      <Text h1>Create room</Text>
+      <Text size={18}>Choose a voting system for your game.</Text>
+      <FormControl  sx={{ gap: 3 }}>
         <InputLabel id="select-voting-system-label">Voting system</InputLabel>
         <Select
           labelId="select-voting-system-label"
@@ -84,6 +86,7 @@ function CreateRoom() {
           ))}
           <MenuItem key={'custom'} value={'custom'}>Custom</MenuItem>
         </Select>
+        <Button >Create</Button>
       </FormControl>
       </div>
   )

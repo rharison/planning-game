@@ -5,7 +5,7 @@ import playedAnimation from '../../public/assets/animations/played.json'
 import './Player.css'
 
 function Player({ name, gameId }) {
-  const [isPlayedState, setIsPlayedState] = React.useState(false)
+  const [isPlayedState, setIsPlayedState] = React.useState(true)
   const [isShowValue, setIsShowValue] = React.useState(false)
   const [valuePlayed, setValuePlayed] = React.useState(10)
   return (

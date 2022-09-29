@@ -1,7 +1,7 @@
 import {
   Route,
   Routes,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import './App.css'
 import Game from "./partials/game/Game";
